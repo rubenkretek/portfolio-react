@@ -1,8 +1,34 @@
+import Nav from './components/Nav'
+import Home from './pages/Home'
 import AboutUs from './pages/AboutUs'
+import Contact from './pages/Contact'
+import Work from './pages/Work'
+import './styles/global.scss'
+import { Switch, Route } from 'react-router-dom';
+
+
+
 
 function App() {
   return (
-    <AboutUs />
+    <>
+      <Nav />
+      <Switch>
+        <Route path="/" exact>
+          <Home />
+        </Route>
+        <Route path="/about">
+          <AboutUs />
+        </Route>
+        <Route path="/work">
+          <Work />
+        </Route>
+        <Route path="/contact">
+          <Contact />
+        </Route>
+      </Switch>
+
+    </>
   );
 }
 

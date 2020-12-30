@@ -1,0 +1,18 @@
+.main-nav {
+  .nav-container {
+    display: flex;
+    max-width: 1440px;
+    margin: 0 auto;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .menu {
+    list-style: none;
+    padding: none;
+    margin: none;
+    display: flex;
+  }
+  .nav-logo {
+    width: 60px;
+  }
+}

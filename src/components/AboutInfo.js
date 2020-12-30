@@ -25,7 +25,7 @@ const AboutInfo = () => {
                 </p>
                 </div>
                 <div>
-                    <img src={building} alt="White square building" />
+                    <img src={building} alt="White square building" class="building" />
                 </div>
             </section>
         </div>
