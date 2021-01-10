@@ -3,6 +3,8 @@ import { useHistory } from 'react-router-dom';
 import { workState } from '../workState';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
+import '../styles/components/switcher.scss'
+import '../styles/components/work.scss'
 
 
 const WorkItem = () => {
@@ -10,13 +12,20 @@ const WorkItem = () => {
     const url = history.location.pathname;
     const [workItems, setWorkItems] = useState(workState);
     const [work, setWork] = useState(null);
+    const [backgroundColor, setBackgroundColor] = useState(null);
+    const featuredStyles = {
+        backgroundColor: backgroundColor,
+    };
 
 
     //useEffect
     useEffect(() => {
         const currentWork = workItems.filter((stateWork) => stateWork.url === url);
         setWork(currentWork[0]);
+        setBackgroundColor(currentWork[0].carouselBackground);
     }, [workItems, url]);
+
+
 
     return (
         <>
@@ -55,29 +64,29 @@ const WorkItem = () => {
                             </ul>
                         </div>
                     </section>
-                    <section className="work__featured">
-                        <div clas="left">
-                            <Tabs>
+                    <section className="work--featured" style={featuredStyles}>
+                        <div className="work--featured-left">
+                            <Tabs className="image-switcher">
                                 {work.carouselImages.map((carouselImages) => (
-
                                     <TabPanel>
-                                        <img src={carouselImages.carouselImage} alt={carouselImages.carouselAltText} />
-
+                                        <div className="switcher__image">
+                                            <img src={carouselImages.carouselImage} alt={carouselImages.carouselAltText} />
+                                        </div>
                                     </TabPanel>
                                 ))}
-
                                 <TabList>
                                     {work.carouselImages.map((carouselImages, i) => (
                                         <Tab>
                                             <p>{i + 1}</p>
                                         </Tab>
                                     ))}
-
                                 </TabList>
                             </Tabs>
                         </div>
-                        <div className="right">
-
+                        <div className="work--featured-right">
+                            <h2>{work.carouselTitle}</h2>
+                            <h3>{work.carouselSubtitle}</h3>
+                            <p>{work.carouselText}</p>
                         </div>
                     </section>
                 </div>
@@ -99,5 +108,6 @@ const DeliverablesListItem = ({ deliverablesPoint }) => {
         <li>{deliverablesPoint}</li>
     )
 };
+
 
 export default WorkItem;
