@@ -108,10 +108,11 @@ export const workState = () => {
                 },
             ],
             conclusionText: "<p>Professional, modern design with easy to use complex functionality, enabling users to book online.</p><p>Click the button below to see the live site (please bear in mind the site has been taken over by another company so it may have changed since I built it)</p>",
-            conclusionLink: "https://www.gsclearance.co.uk/"
+            conclusionLink: "https://www.gsclearance.co.uk/",
+            conclusionLinkText: "Visit site"
         },
         {
-            projectName: "Waste Clearance",
+            projectName: "Care agency",
             companyName: "FirstCol",
             thumbnail: gsThumbnail,
             teaserText: ["Branding Identity", "Bespoke WordPress website", "Custom quote form."],
@@ -130,7 +131,7 @@ export const workState = () => {
             carouselTitle: "Design",
             carouselSubtitle: "Making the site easy to use",
             carouselText: "The target audience was broad, so the site needed to appeal to, and be easily used by, everyone. Its design needed to be refreshed to meet the standards expected in 2020. The original site was completely stripped back and only essential content was kept.",
-            carouselBackground: "purple",
+            carouselBackground: "#f7d2e6",
             carouselImages: [
                 {
                     carouselImage: gsTab1,
@@ -201,7 +202,8 @@ export const workState = () => {
                 },
             ],
             conclusionText: "<p>Professional, modern design with easy to use complex functionality, enabling users to book online.</p><p>Click the button below to see the live site (please bear in mind the site has been taken over by another company so it may have changed since I built it)</p>",
-            conclusionLink: "https://www.gsclearance.co.uk/"
+            conclusionLink: "https://www.gsclearance.co.uk/",
+            conclusionLinkText: "Visit site"
         },
     ];
 };

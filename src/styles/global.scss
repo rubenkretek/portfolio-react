@@ -1,5 +1,8 @@
 @import "include-media/dist/_include-media.scss";
 
+html {
+  scroll-behavior: smooth;
+}
 /*
 Exmaples of breakpoints
 @include media(">phone") {

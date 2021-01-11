@@ -89,6 +89,40 @@ const WorkItem = () => {
                             <p>{work.carouselText}</p>
                         </div>
                     </section>
+                    <section class="work__content">
+                        <h2>{work.contentTitle}</h2>
+                        {work.contentModules.map((contentModules) => (
+                            <div className="work__content-container">
+                                <div className="work__content-left">
+                                    <div className="work__content-image">
+                                        <img src={contentModules.contentImg} alt={contentModules.contentImgAltText} />
+                                    </div>
+                                </div>
+                                <div className="work__content-right">
+                                    <div className="work__content-title">
+                                        <h3>{contentModules.contentSubtitle}</h3>
+                                    </div>
+                                    <div className="work__content-copy" dangerouslySetInnerHTML={{ __html: contentModules.contentText }}>
+                                        {/* HTML content gets parsed here */}
+                                    </div>
+                                    {contentModules.link && (
+                                        <div className="work__content-link">
+                                            <a href={contentModules.link}>{contentModules.linkText}</a>
+                                        </div>
+                                    )}
+                                </div>
+                            </div>
+                        ))}
+                    </section>
+                    <section class="work__conclusion">
+                        <h2>Finished Product</h2>
+                        <div className="work__conclusion-copy" dangerouslySetInnerHTML={{ __html: work.conclusionText }}>
+                            {/* HTML content gets parsed here */}
+                        </div>
+                        <div className="work__conclusion-link">
+                            <a href={work.conclusionLink}>{work.conclusionLinkText}</a>
+                        </div>
+                    </section>
                 </div>
             )}
         </>
