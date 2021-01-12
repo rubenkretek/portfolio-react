@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
+import WorkGrid from '../components/WorkGrid';
 //Page components
 
 
 const Work = () => {
+
     return (
-        <div>
-            This is the portfolio
+        <div className="work__list">
+            <WorkGrid />
         </div>
     )
 }
