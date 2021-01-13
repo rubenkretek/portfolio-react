@@ -1,4 +1,8 @@
+//import font
+@import url("https://use.typekit.net/hob4mum.css");
+
 @import "include-media/dist/_include-media.scss";
+@import "/variables.scss";
 
 html {
   scroll-behavior: smooth;
@@ -26,6 +30,7 @@ Exmaples of breakpoints
 // Typography
 body {
   font-weight: 500;
+  font-family: $primary-font;
 }
 
 h2,

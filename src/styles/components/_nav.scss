@@ -1,0 +1,54 @@
+@import "../variables.scss";
+@import "include-media/dist/_include-media.scss";
+.main-nav {
+  .top-bar-left {
+    width: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .top-bar-center {
+  }
+  .top-bar-right {
+    width: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .nav-container--full {
+    max-width: 1440px;
+    margin: 0 auto;
+    width: 100%;
+    justify-content: space-between;
+    padding: 5px 0;
+    display: none;
+    @include media(">tablet") {
+      display: flex;
+    }
+  }
+  .nav__menu {
+    list-style: none;
+    padding: none;
+    margin: none;
+    display: flex;
+    margin-left: 0;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .nav__item {
+    a {
+      font-family: $secondary-font;
+      line-height: 1;
+      text-decoration: none;
+      text-transform: uppercase;
+      color: $black;
+      font-size: 16px;
+      padding: 20px;
+      margin-right: 5px;
+      margin-left: 5px;
+    }
+  }
+  .nav-logo {
+    width: 60px;
+  }
+}
