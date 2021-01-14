@@ -3,8 +3,6 @@ import { useHistory } from 'react-router-dom';
 import { workState } from '../workState';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
-import '../styles/components/_switcher.scss'
-import '../styles/components/_work.scss'
 
 
 const WorkItem = () => {
