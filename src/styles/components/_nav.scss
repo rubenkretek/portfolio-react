@@ -60,6 +60,9 @@
     align-items: center;
     padding: 10px 15px;
     border-bottom: 3px solid $black;
+    @include media(">tablet") {
+      display: none;
+    }
     .nav-logo {
       margin-bottom: -10px;
       margin: 0;
@@ -68,7 +71,7 @@
     .button_container {
       position: relative;
       height: 27px;
-      width: 40px;
+      width: 35px;
       cursor: pointer;
       z-index: 100;
       transition: opacity 0.25s ease;
@@ -125,6 +128,7 @@
       visibility: hidden;
       transition: opacity 0.35s, visibility 0.35s, height 0.35s;
       overflow: hidden;
+      z-index: 99;
 
       &.open {
         opacity: 0.9;

@@ -1,0 +1,28 @@
+.grid {
+  &__12 {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 25px;
+  }
+  &__half {
+    grid-column: 1 / 6;
+  }
+}
+
+@mixin grid-12 {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 25px;
+}
+
+@mixin grid-columns-half {
+  grid-column: 1 / 6;
+}
+
+@mixin grid-columns-3-4 {
+  grid-column: 1 / 9;
+}
+
+@mixin grid-columns-full {
+  grid-column: 1 / 12;
+}

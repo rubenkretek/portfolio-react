@@ -1,7 +1,15 @@
 @import "/variables.scss";
 @import "/global.scss";
 
+@import "/layout/_layout.scss";
+@import "/layout/_grid.scss";
+
 // Components
+@import "/components/_banner.scss";
+@import "/components/_button.scss";
 @import "/components/_nav.scss";
 @import "/components/_switcher.scss";
 @import "/components/_work.scss";
+
+//Pages
+@import "/pages/_home.scss";

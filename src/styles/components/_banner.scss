@@ -1,0 +1,19 @@
+.banner {
+  &--full-height {
+    min-height: calc(100vh - 75px);
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    align-items: center;
+    position: relative;
+    .banner__container {
+      max-width: 600px;
+    }
+    .banner__button {
+      position: absolute;
+      bottom: 50px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}

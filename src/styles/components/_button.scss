@@ -1,0 +1,43 @@
+.button {
+  background-color: #fff;
+  color: #000;
+  border: 3px solid #000;
+  box-shadow: 1px 1px 0px #000, 2px 2px 0px #000, 3px 3px 0px #000,
+    4px 4px 0px #000;
+  transition: all 0.3s ease;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 10px 20px;
+  text-decoration: none;
+  display: inline-block;
+
+  &:hover,
+  &:focus {
+    box-shadow: 1px 1px 0px #e31617, 2px 2px 0px #e31617, 3px 3px 0px #e31617,
+      4px 4px 0px #e31617;
+    background: #fff;
+    color: #000;
+    text-decoration: none;
+  }
+
+  &--secondary {
+    background-color: #000;
+    color: #fff;
+    border-color: #fff;
+    box-shadow: 1px 1px 0px #fff, 2px 2px 0px #fff, 3px 3px 0px #fff,
+      4px 4px 0px #fff;
+    &:hover,
+    &:focus {
+      box-shadow: 1px 1px 0px #e31617, 2px 2px 0px #e31617, 3px 3px 0px #e31617,
+        4px 4px 0px #e31617;
+      background: #000;
+      color: #fff;
+    }
+  }
+
+  &--icon {
+    font-size: 20px;
+    padding: 10px 20px;
+  }
+}

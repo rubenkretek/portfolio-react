@@ -1,0 +1,22 @@
+.home {
+  &__banner-content {
+  }
+  &__intro {
+    background-size: cover;
+    background-position: center bottom;
+    @include normal-padding();
+
+    .home__intro-container {
+      @include grid-12();
+    }
+    .home__intro-content {
+      @include grid-columns-full();
+      @include media(">tablet") {
+        @include grid-columns-3-4();
+      }
+      @include media(">large") {
+        @include grid-columns-half();
+      }
+    }
+  }
+}
