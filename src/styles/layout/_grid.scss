@@ -12,11 +12,14 @@
 @mixin grid-12 {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-gap: 25px;
 }
 
 @mixin grid-columns-half {
   grid-column: 1 / 6;
+}
+
+@mixin grid-columns-half-center {
+  grid-column: 4 / 10;
 }
 
 @mixin grid-columns-3-4 {
@@ -24,5 +27,5 @@
 }
 
 @mixin grid-columns-full {
-  grid-column: 1 / 12;
+  grid-column: 1 / 13;
 }

@@ -54,6 +54,31 @@ const Home = () => {
                     </div>
                 </div>
             </section>
+            <section id="home__section-3" class="home__work secondary">
+                <div className="l-default">
+
+                    <div class="home__work-container">
+                        <div class="home__work-content">
+                            <h2 class="heading-large">Work</h2>
+                            <p class="text--lead">
+                                Quality work means quality results, which is why I always strive to
+                                produce the highest quality work. I’m always looking for ways to
+                                improve and new things to learn, and, having worked on projects for a
+                                range of industries and clients, I’m ready to take on anything.
+                        </p>
+
+                            <a href="#home__section-5" class="button button--secondary button--icon">
+                                <FontAwesomeIcon icon={faCaretDown} />
+                            </a>
+
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+            </section>
         </div>
     )
 }

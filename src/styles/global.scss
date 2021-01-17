@@ -162,3 +162,11 @@ a,
     font-size: 14px;
   }
 }
+
+//color schemes
+.secondary {
+  background-color: $black;
+  * {
+    color: $white;
+  }
+}

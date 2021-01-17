@@ -2,9 +2,9 @@
   &__banner-content {
   }
   &__intro {
+    @include normal-padding();
     background-size: cover;
     background-position: center bottom;
-    @include normal-padding();
 
     .home__intro-container {
       @include grid-12();
@@ -16,6 +16,19 @@
       }
       @include media(">large") {
         @include grid-columns-half();
+      }
+    }
+  }
+  &__work {
+    @include normal-padding();
+    .home__work-container {
+      @include grid-12();
+    }
+    .home__work-content {
+      text-align: center;
+      @include grid-columns-full();
+      @include media(">tablet") {
+        @include grid-columns-half-center();
       }
     }
   }
