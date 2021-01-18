@@ -12,6 +12,10 @@
   text-decoration: none;
   display: inline-block;
 
+  svg {
+    display: block;
+  }
+
   &:hover,
   &:focus {
     box-shadow: 1px 1px 0px #e31617, 2px 2px 0px #e31617, 3px 3px 0px #e31617,

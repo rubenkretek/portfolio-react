@@ -131,7 +131,9 @@ a,
     font-weight: 600;
     letter-spacing: 0;
   }
-
+  &--red-highlight-container {
+    margin-top: -25px;
+  }
   &--red-highlight {
     background: #e31617;
     color: #fff;

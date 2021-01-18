@@ -6,7 +6,7 @@ import { workState } from '../workState';
 const WorkGrid = () => {
     const [workItems, setWorkItems] = useState(workState);
     return (
-        <div className="work__list">
+        <div className="work work--list">
             <ul className="work__grid">
                 {workItems.map(({ projectName, thumbnail, url, teaserText }) => (
                     <li>
@@ -15,7 +15,7 @@ const WorkGrid = () => {
                                 <img src={thumbnail} alt="companyName" />
                             </div>
                             <div className="work__title">
-                                <h2>{projectName}</h2>
+                                <h3>{projectName}</h3>
                             </div>
                             <div className="work__copy">
                                 <ul>

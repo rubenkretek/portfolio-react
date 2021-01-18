@@ -32,4 +32,12 @@
       }
     }
   }
+  &__divider {
+    background-position: 50% 100%;
+    background-size: cover;
+    min-height: 565px;
+  }
+  &__portfolio {
+    @include normal-padding();
+  }
 }

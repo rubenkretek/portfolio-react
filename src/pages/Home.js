@@ -1,12 +1,15 @@
 import React from 'react';
 
-//Import icons
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
+//Icons
+import { FaCaretDown } from 'react-icons/fa';
 
-//Import images
+//Images
 import introBackground from '../img/home-mountain.jpg';
+import dividerBackground from '../img/black-background-mountain.jpg';
 
+//Components
+import WorkGrid from '../components/WorkGrid';
+import ContactModule from '../components/ContactModule';
 
 const Home = () => {
     return (
@@ -22,7 +25,7 @@ const Home = () => {
                         </div>
                         <div class="banner__button">
                             <a href="#home__section-2" class="button button--icon">
-                                <FontAwesomeIcon icon={faCaretDown} />
+                                <FaCaretDown />
                             </a>
                         </div>
                     </div>
@@ -56,7 +59,6 @@ const Home = () => {
             </section>
             <section id="home__section-3" class="home__work secondary">
                 <div className="l-default">
-
                     <div class="home__work-container">
                         <div class="home__work-content">
                             <h2 class="heading-large">Work</h2>
@@ -68,17 +70,20 @@ const Home = () => {
                         </p>
 
                             <a href="#home__section-5" class="button button--secondary button--icon">
-                                <FontAwesomeIcon icon={faCaretDown} />
+                                <FaCaretDown />
                             </a>
 
                         </div>
                     </div>
-
-
-
-
                 </div>
             </section>
+            <section id="home__section-4" class="home__divider" style={{ backgroundImage: `url(${dividerBackground})` }}></section>
+            <section id="home__section-5" class="home__portfolio ">
+                <div className="l-default">
+                    <WorkGrid />
+                </div>
+            </section>
+            <ContactModule />
         </div>
     )
 }
