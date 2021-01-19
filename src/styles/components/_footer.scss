@@ -1,0 +1,43 @@
+.footer {
+  &__top {
+    @include normal-padding();
+    text-align: center;
+  }
+  &__image {
+    max-width: 100px;
+    display: block;
+    margin: 0 auto;
+  }
+  &__email {
+    text-decoration: none;
+    transition: all 0.3 ease;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  &__bottom {
+    display: flex;
+  }
+  &__links {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 10px 25px;
+    li {
+      border-right: 2px solid rgba(255, 255, 255, 62%);
+      &:last-child {
+        border: none;
+      }
+      a {
+        padding: 5px 45px;
+        font-weight: $global-weight-bold;
+        text-decoration: none;
+        transition: all 0.3 ease;
+        &:hover {
+          background: $black-hover;
+        }
+      }
+    }
+  }
+}
