@@ -98,9 +98,17 @@ a,
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 0;
-  font-size: clamp(4.5rem, 14.5vw, 7.8rem);
-  word-wrap: break-word;
   margin-bottom: 20px;
+  font-size: 60px;
+  @include media(">phone") {
+    font-size: 75px;
+  }
+  @include media(">tablet") {
+    font-size: 100px;
+  }
+  @include media(">desktop") {
+    font-size: 125px;
+  }
 }
 
 .text {

@@ -23,17 +23,26 @@
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
-    padding: 10px 25px;
+    padding: 10px 15px;
+    @include media(">tablet") {
+      padding: 10px 25px;
+    }
     li {
       border-right: 2px solid rgba(255, 255, 255, 62%);
       &:last-child {
         border: none;
       }
       a {
-        padding: 5px 45px;
         font-weight: $global-weight-bold;
         text-decoration: none;
         transition: all 0.3 ease;
+        padding: 5px 15px;
+        @include media(">phone") {
+          padding: 5px 25px;
+        }
+        @include media(">tablet") {
+          padding: 5px 45px;
+        }
         &:hover {
           background: $black-hover;
         }

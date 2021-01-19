@@ -35,7 +35,13 @@
   &__divider {
     background-position: 50% 100%;
     background-size: cover;
-    min-height: 565px;
+    height: 265px;
+    @include media(">tablet") {
+      height: 365px;
+    }
+    @include media(">large") {
+      height: 565px;
+    }
   }
   &__portfolio {
     @include normal-padding();

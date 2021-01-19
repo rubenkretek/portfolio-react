@@ -4,22 +4,19 @@
   background-position: center center;
 
   &__grid {
-    @include grid-12();
   }
 
   &__container {
-    @include grid-columns-half();
     background: $white;
-    padding: 40px;
-    grid-column: 2 / 12;
-    @include media(">tablet") {
-      grid-column: 1 / 10;
+    width: 100%;
+    padding: 20px;
+    @include media(">520px") {
+      max-width: 520px;
+      padding: 40px;
     }
     @include media(">desktop") {
-      grid-column: 1 / 8;
     }
     @include media(">large") {
-      grid-column: 1 / 6;
     }
   }
   &__heading {
@@ -28,10 +25,19 @@
     }
   }
   &__highlight {
-    font-size: clamp(3rem, 7vw, 5rem);
+    font-size: 55%;
+    margin-left: 2px;
   }
   .highlight-container {
-    margin-top: -25px;
+    margin-top: -15px;
+    @include media(">tablet") {
+      margin-top: -25px;
+    }
+    @include media(">desktop") {
+      margin-top: -33px;
+    }
+    @include media(">large") {
+    }
   }
 
   &__buttons {
