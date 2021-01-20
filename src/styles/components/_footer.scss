@@ -11,6 +11,10 @@
   &__email {
     text-decoration: none;
     transition: all 0.3 ease;
+    font-size: 18px;
+    @include media(">phone") {
+      font-size: 22px;
+    }
     &:hover {
       text-decoration: underline;
     }
@@ -20,10 +24,13 @@
   }
   &__links {
     list-style: none;
-    display: flex;
     justify-content: space-between;
     margin: 0 auto;
     padding: 10px 15px;
+    display: none;
+    @include media(">280px") {
+      display: flex;
+    }
     @include media(">tablet") {
       padding: 10px 25px;
     }

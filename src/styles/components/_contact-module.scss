@@ -25,7 +25,7 @@
     }
   }
   &__highlight {
-    font-size: 55%;
+    font-size: 50%;
     margin-left: 2px;
   }
   .highlight-container {
@@ -44,5 +44,19 @@
     display: flex;
     justify-content: space-between;
     max-width: 250px;
+    flex-direction: column;
+    .button {
+      margin-bottom: 10px;
+      @include media(">310px") {
+        margin-bottom: 0;
+      }
+      svg {
+        margin: 0 auto;
+      }
+    }
+
+    @include media(">310px") {
+      flex-direction: row;
+    }
   }
 }
