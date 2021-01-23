@@ -76,7 +76,8 @@ a,
   font-family: neue-haas-grotesk-display;
   font-weight: 900;
   letter-spacing: 0;
-  font-size: clamp(28px, 4vw, 2.8rem);
+  margin-bottom: 10px;
+  font-size: 45px;
 }
 
 .heading-large {
@@ -158,12 +159,12 @@ a,
   text-decoration: none;
   cursor: pointer;
   font-weight: 600;
+  position: relative;
 
-  &::after {
-    content: "\f30b";
-    font-family: Fontawesome;
-    margin-left: 5px;
-    font-size: 14px;
+  svg {
+    position: absolute;
+    right: -20px;
+    top: 2px;
   }
 }
 

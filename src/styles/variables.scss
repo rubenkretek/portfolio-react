@@ -54,3 +54,12 @@ $breakpoints: (
     padding-bottom: 0;
   }
 }
+
+@mixin normal-padding-side {
+  padding-left: 25px;
+  padding-right: 25px;
+  @include media(">tablet") {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}

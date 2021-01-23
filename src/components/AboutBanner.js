@@ -4,8 +4,8 @@ const AboutBanner = () => {
     return (
         <section id="about__section-1">
             <div className="l-default">
-                <div class="banner about__banner">
-                    <div class="banner__content-container">
+                <div class="banner banner--about">
+                    <div class="banner__container">
                         <div>
                             <h1 class="heading-xlarge">About</h1>
                             <p class="text--banner">

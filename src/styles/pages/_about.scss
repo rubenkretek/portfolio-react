@@ -13,4 +13,28 @@
       }
     }
   }
+  &__work {
+    .about__work-container {
+      @include media(">tablet") {
+        display: flex;
+      }
+    }
+    .about__work-left {
+      @include normal-padding();
+      @include media(">tablet") {
+        @include normal-padding-side();
+        width: 50%;
+        display: flex;
+        align-items: center;
+      }
+    }
+    .about__work-right {
+      @include normal-padding();
+      @include media(">tablet") {
+        @include normal-padding-side();
+        border-left: 2px solid $black;
+        width: 50%;
+      }
+    }
+  }
 }

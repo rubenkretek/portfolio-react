@@ -2,6 +2,9 @@
   min-height: calc(75vh - 75px);
   display: flex;
   align-items: center;
+  .banner__container {
+    max-width: 700px;
+  }
   &--full-height {
     min-height: calc(100vh - 75px);
     display: flex;
