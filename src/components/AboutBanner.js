@@ -2,7 +2,6 @@ import React from 'react';
 
 const AboutBanner = () => {
     return (
-
         <section id="about__section-1">
             <div className="l-default">
                 <div class="banner about__banner">
@@ -19,7 +18,6 @@ const AboutBanner = () => {
                 </div>
             </div>
         </section>
-
     )
 }
 

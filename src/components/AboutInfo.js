@@ -4,14 +4,13 @@ import building from '../img/about-building.png'
 
 const AboutInfo = () => {
     return (
-        <div>
-            <section id="about__section-2">
-                <div class="row container">
-
+        <section id="about__section-2" class="about__info">
+            <div className="l-700">
+                <div class="about__info-text">
                     <h2 class="heading-xlarge text--light">
                         Design<br />
-                        Build <br />
-                        Learn
+                    Build <br />
+                    Learn
                 </h2>
                     <p class="text--light text--lead">
                         I started my career as a UI/UX designer for a small marketing agency,
@@ -24,11 +23,11 @@ const AboutInfo = () => {
                         development skillset by learning React.
                 </p>
                 </div>
-                <div>
+                <div class="about__info-image">
                     <img src={building} alt="White square building" class="building" />
                 </div>
-            </section>
-        </div>
+            </div>
+        </section>
     )
 }
 

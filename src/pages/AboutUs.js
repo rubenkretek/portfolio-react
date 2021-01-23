@@ -6,7 +6,7 @@ import AboutWork from '../components/AboutWork';
 
 const AboutUs = () => {
     return (
-        <div>
+        <div className="about">
             <AboutBanner />
             <AboutInfo />
             <AboutWork />
