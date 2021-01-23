@@ -2,10 +2,11 @@ import React from 'react';
 
 const AboutBanner = () => {
     return (
-        <div>
-            <section id="about__section-1" class="banner about__banner">
-                <div class="container">
-                    <div class="row banner__content-container">
+
+        <section id="about__section-1">
+            <div className="l-default">
+                <div class="banner about__banner">
+                    <div class="banner__content-container">
                         <div>
                             <h1 class="heading-xlarge">About</h1>
                             <p class="text--banner">
@@ -16,8 +17,9 @@ const AboutBanner = () => {
                         </div>
                     </div>
                 </div>
-            </section>
-        </div>
+            </div>
+        </section>
+
     )
 }
 
