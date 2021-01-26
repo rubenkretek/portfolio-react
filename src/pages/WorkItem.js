@@ -30,36 +30,40 @@ const WorkItem = () => {
             {work && (
                 <div>
                     <section className="banner work__banner">
-                        <div className="work__title">
-                            <h1>{work.companyName}</h1>
-                        </div>
-                        <div>
-                            <h2>Who are they?</h2>
-                            <p>
-                                {work.whoAre}
-                            </p>
-                        </div>
-                        <div>
-                            <h2>The brief</h2>
-                            <ul>
-                                {work.brief.map((brief) => (
-                                    <BriefListItem
-                                        briefPoint={brief.briefPoint}
-                                        key={brief.briefPoint}
-                                    />
-                                ))}
-                            </ul>
-                        </div>
-                        <div>
-                            <h2>Delivarables</h2>
-                            <ul>
-                                {work.deliverables.map((deliverables) => (
-                                    <DeliverablesListItem
-                                        deliverablesPoint={deliverables.deliverablesPoint}
-                                        key={deliverables.deliverablesPoint}
-                                    />
-                                ))}
-                            </ul>
+                        <div className="l-default">
+                            <div className="work__title">
+                                <h1 class="heading-xlarge">{work.companyName}</h1>
+                            </div>
+                            <div className="work__overview">
+                                <div className="work__overview-item">
+                                    <h2 className="heading-h3 text--red">Who are they?</h2>
+                                    <p className="text--meta">
+                                        {work.whoAre}
+                                    </p>
+                                </div>
+                                <div className="work__overview-item">
+                                    <h2 className="heading-h3 text--red">The brief</h2>
+                                    <ul className="text--meta">
+                                        {work.brief.map((brief) => (
+                                            <BriefListItem
+                                                briefPoint={brief.briefPoint}
+                                                key={brief.briefPoint}
+                                            />
+                                        ))}
+                                    </ul>
+                                </div>
+                                <div className="work__overview-item">
+                                    <h2 className="heading-h3 text--red">Delivarables</h2>
+                                    <ul className="text--meta">
+                                        {work.deliverables.map((deliverables) => (
+                                            <DeliverablesListItem
+                                                deliverablesPoint={deliverables.deliverablesPoint}
+                                                key={deliverables.deliverablesPoint}
+                                            />
+                                        ))}
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </section>
                     <section className="work--featured" style={featuredStyles}>

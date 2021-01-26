@@ -1,0 +1,27 @@
+.work {
+  &__title {
+    @include media("<tablet") {
+      word-break: break-word;
+    }
+  }
+  &__grid {
+    @include normal-padding-bottom();
+  }
+  &__overview {
+    margin-top: 45px;
+    @include media(">tablet") {
+      display: grid;
+      grid-column-gap: 25px;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+  &__overview-item {
+    @include media("<tablet") {
+      margin-top: 30px;
+    }
+  }
+}
+
+img {
+  max-width: 100%;
+}
