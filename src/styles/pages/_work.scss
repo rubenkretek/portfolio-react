@@ -20,6 +20,33 @@
       margin-top: 30px;
     }
   }
+  &__featured {
+    @include normal-padding();
+    @include media(">tablet") {
+      display: flex;
+      align-items: center;
+    }
+    & > div {
+      padding-left: 15px;
+      padding-right: 15px;
+      @include media(">tablet") {
+        width: 50%;
+      }
+      @include media(">desktop") {
+        padding-left: 50px;
+        padding-right: 50px;
+      }
+    }
+    &-right {
+      padding-top: 30px;
+      @include media(">tablet") {
+        padding-top: 0;
+      }
+    }
+    &-content {
+      max-width: 600px;
+    }
+  }
 }
 
 img {

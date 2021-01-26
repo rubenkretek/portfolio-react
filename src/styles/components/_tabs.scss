@@ -32,6 +32,14 @@
       background: $black;
     }
   }
-  &--work {
+  &--work-item {
+    .tabs__nav {
+      flex-wrap: wrap;
+    }
+    .tabs__nav-item {
+      @include media("<tablet") {
+        margin-bottom: 10px;
+      }
+    }
   }
 }

@@ -66,29 +66,31 @@ const WorkItem = () => {
                             </div>
                         </div>
                     </section>
-                    <section className="work--featured" style={featuredStyles}>
-                        <div className="work--featured-left">
-                            <Tabs className="image-switcher">
+                    <section className="work__featured" style={featuredStyles}>
+                        <div className="work__featured-left">
+                            <Tabs className="tabs tabs--work-item">
                                 {work.carouselImages.map((carouselImages) => (
                                     <TabPanel>
-                                        <div className="switcher__image">
+                                        <div className="tabs__image">
                                             <img src={carouselImages.carouselImage} alt={carouselImages.carouselAltText} />
                                         </div>
                                     </TabPanel>
                                 ))}
-                                <TabList>
+                                <TabList className="tabs__nav">
                                     {work.carouselImages.map((carouselImages, i) => (
-                                        <Tab>
-                                            <p>{i + 1}</p>
+                                        <Tab className="tabs__nav-item">
+                                            <a className="button">{i + 1}</a>
                                         </Tab>
                                     ))}
                                 </TabList>
                             </Tabs>
                         </div>
-                        <div className="work--featured-right">
-                            <h2>{work.carouselTitle}</h2>
-                            <h3>{work.carouselSubtitle}</h3>
-                            <p>{work.carouselText}</p>
+                        <div className="work__featured-right">
+                            <div className="work__featured-content">
+                                <h2 className="heading-large">{work.carouselTitle}</h2>
+                                <h3>{work.carouselSubtitle}</h3>
+                                <p>{work.carouselText}</p>
+                            </div>
                         </div>
                     </section>
                     <section class="work__content">
