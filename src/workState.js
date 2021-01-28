@@ -139,7 +139,7 @@ export const workState = () => {
             projectName: "Marketing Agency",
             companyName: "Huga",
             thumbnail: hugaThumbnail,
-            teaserText: ["Branding Identity", "Bespoke WordPress website", "Custom quote form."],
+            teaserText: ["Branding Identity", "Static PHP website", "Print / Video / Merch collateral."],
             url: "/work/huga",
             whoAre: "Sussex-based web design and digital marketing agency, working with local SMEs to promote their businesses online.",
             brief: [
@@ -227,8 +227,8 @@ export const workState = () => {
             ],
             deliverables: [
                 { deliverablesPoint: "Job board functionality" },
-                { delivarablesPoint: "Bespoke WordPress template" },
-                { delivarablesPoint: "Training session with staff" }
+                { deliverablesPoint: "Bespoke WordPress template" },
+                { deliverablesPoint: "Training session with staff" }
             ],
             carouselTitle: "Jobs",
             carouselSubtitle: "A built-in jobs board that can be easily managed by FirstCol staff",
@@ -275,8 +275,8 @@ export const workState = () => {
                 {
                     contentImg: fcImage4,
                     contentImgAltText: "Fast track application form",
-                    contentSubtitle: "Time is money",
-                    contentText: "<p>FirstCol were experiencing a high rate of drop-offs with their previous form, as users were frustrated by the length of it.</p><p>To maximise leads, I added an alternative ‘fast-track’ form, which is a stripped back version of the main application form that takes 5 minutes to complete. This allows FirstCol to still make contact with the potential candidate who would otherwise have dropped off.</p>",
+                    contentSubtitle: "Bespoke WordPress theme",
+                    contentText: "<p>FirstCol supplied a fresh branding guideline that I used when building their new site.</p><p>This posed many challenges which couldn’t be solved with an off-the-shelf theme, so I built a custom one.</p><p>All job modules on the site needed to appear in a specific way that wasn’t present in the plugin or any other theme. I used a combination of PHP, CSS and JS to achieve the required layout.</p>",
                 },
                 {
                     contentImg: fcImage5,

@@ -21,8 +21,8 @@
     }
     .about__work-left {
       @include normal-padding();
+      @include normal-padding-side();
       @include media(">tablet") {
-        @include normal-padding-side();
         width: 50%;
         display: flex;
         align-items: center;
@@ -30,8 +30,8 @@
     }
     .about__work-right {
       @include normal-padding();
+      @include normal-padding-side();
       @include media(">tablet") {
-        @include normal-padding-side();
         border-left: 2px solid $black;
         width: 50%;
       }
