@@ -45,7 +45,7 @@ const AboutWork = () => {
 
                                         </div>
                                         <div className="tabs__link">
-                                            <a href={url} className="arrow-link">Read more <FaLongArrowAltRight /></a>
+                                            <a href={url} className="arrow-link">View project <FaLongArrowAltRight /></a>
                                         </div>
                                         <div className="tabs__image">
                                             <img src={thumbnail} alt={thumbnail} />

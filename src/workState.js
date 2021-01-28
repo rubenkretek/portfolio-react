@@ -92,14 +92,15 @@ export const workState = () => {
             contentModules: [
                 {
                     contentImg: gsImage1,
-                    contentImgAltText: "Example of how the postcode entry works",
-                    contentSubtitle: "Minimising the number of cold leads",
-                    contentText: "<p>The aim was to minimise time spent on the phone generating quotes, and to increase the number of enquiries.</p><p>G&S required a bespoke quote calculator which could calculate the charge to the user based on their selections, and allow them to choose a date and time for their collection. I designed the entire experience of the user, then built the form using a plugin as the base system, and used PHP and JavaScript to add complex functionality.</p>"
+                    contentImgAltText: "Steps to a booking",
+                    contentSubtitle: "Streamlining the booking process",
+                    contentText: "<p>The aim was to minimise time spent on the phone generating quotes, and to increase the number of enquiries.</p><p>G&S required a bespoke quote calculator which could calculate the charge to the user based on their selections, and allow them to choose a date and time for their collection. I designed the entire experience of the user, then built the form using a plugin as the base system, and used PHP and JavaScript to add complex functionality.</p>",
+
                 },
                 {
                     contentImg: gsImage2,
-                    contentImgAltText: "Minimising the number of cold leads",
-                    contentSubtitle: "Streamlining the booking process",
+                    contentImgAltText: "Example of how the postcode entry works",
+                    contentSubtitle: "Minimising the number of cold leads",
                     contentText: "<p>As G&S only operate in the South East, I needed to make sure that only people in this area were enquiring. To do this I used the first half of their postcode to validate where in the country they were.</p><p>I split the postcode into two fields and used JavaScript to allow users to seamlessly type their postcode in across two fields.</p>",
                     link: "https://codepen.io/Rubenkretek/full/wvBGERO",
                     linkText: "Try it out"

@@ -57,6 +57,12 @@
         align-items: center;
         justify-content: center;
       }
+      p {
+        line-height: 1.6;
+      }
+      ul {
+        line-height: 1.6;
+      }
     }
     &-left {
       @include media(">tablet") {

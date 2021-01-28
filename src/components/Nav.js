@@ -23,7 +23,7 @@ const Nav = () => {
                 </div>
                 <div className="top-bar-right">
                     <ul className="nav__menu">
-                        <li class="nav__item"><Link to="/">Home</Link></li>
+                        <li class="nav__item"><a href="https://github.com/rubenkretek" target="_blank" rel="noreferrer">GitHub</a></li>
                         <li class="nav__item"><Link to="/contact">Contact</Link></li>
                     </ul>
                 </div>

@@ -116,7 +116,7 @@ const WorkItem = () => {
                                         </div>
                                         {contentModules.link && (
                                             <div className="work__content-link">
-                                                <a href={contentModules.link} className="button">{contentModules.linkText}</a>
+                                                <a href={contentModules.link} className="button" target="_blank" rel="noreferrer">{contentModules.linkText}</a>
                                             </div>
                                         )}
                                     </div>
@@ -134,7 +134,7 @@ const WorkItem = () => {
 
                                 </div>
                                 <div className="work__conclusion-link">
-                                    <a href={work.conclusionLink} className="button">{work.conclusionLinkText}</a>
+                                    <a href={work.conclusionLink} className="button" target="_blank" rel="noreferrer">{work.conclusionLinkText}</a>
                                 </div>
                             </div>
                         </div>
