@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { workState } from '../workState';
+import { Link } from 'react-router-dom';
 //Page components
 
 
@@ -25,7 +26,7 @@ const WorkGrid = () => {
                                 </ul>
                             </div>
                             <div className="work__link">
-                                <a href={url} className="button">Read more</a>
+                                <Link to={url} className="button">Read more</Link>
                             </div>
                         </div>
                     </li>
