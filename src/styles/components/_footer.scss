@@ -27,10 +27,11 @@
     justify-content: space-between;
     margin: 0 auto;
     padding: 10px 15px;
-    display: none;
-    @include media(">280px") {
-      display: flex;
-    }
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
     @include media(">tablet") {
       padding: 10px 25px;
     }
@@ -43,13 +44,9 @@
         font-weight: $global-weight-bold;
         text-decoration: none;
         transition: all 0.3 ease;
-        padding: 5px 15px;
-        @include media(">phone") {
-          padding: 5px 25px;
-        }
-        @include media(">tablet") {
-          padding: 5px 45px;
-        }
+        display: block;
+        padding-top: 2px;
+        padding-bottom: 2px;
         &:hover {
           background: $black-hover;
         }

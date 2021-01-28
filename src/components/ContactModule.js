@@ -7,7 +7,6 @@ import ContactButtons from '../components/ContactButtons';
 
 const ContactModule = () => {
     return (
-
         <section class="contact-module" style={{ backgroundImage: `url(${backgroundImage})` }}>
             <div className="l-default">
                 <div class="contact-module__container">
@@ -24,10 +23,7 @@ const ContactModule = () => {
                     <ContactButtons />
                 </div>
             </div>
-
-
         </section>
-
     )
 }
 

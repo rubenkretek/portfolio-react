@@ -20,7 +20,6 @@ const ContactButtons = () => {
                 <FaGithub />
             </a>
         </div>
-
     )
 }
 
