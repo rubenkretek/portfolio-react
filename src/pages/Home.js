@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 //Icons
 import { FaCaretDown } from 'react-icons/fa';
@@ -51,7 +52,8 @@ const Home = () => {
                                     the first time around, so I think carefully about every decision I
                                     make and imagine what effect it will have in the future.
                                 </p>
-                                <a href="/about.html" class="button">Learn more</a>
+                                <Link to="/about" class="button">Learn More</Link>
+
                             </div>
                         </div>
                     </div>
