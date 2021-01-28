@@ -1,0 +1,86 @@
+// Colors
+$black: #000;
+$black-hover: #1a1a1a;
+$white: #fff;
+$primary-color: #e31617;
+
+//Fonts
+$primary-font: "neue-haas-grotesk-display", sans-serif;
+$secondary-font: "rigid-square", sans-serif;
+$global-weight-bold: 700;
+
+//Settings
+$default-grid-width: 1600px;
+
+// Layout
+$breakpoints: (
+  phone: 320px,
+  tablet: 768px,
+  desktop: 1024px,
+  large: 1200px,
+  xlarge: 1400px,
+  xxlarge: 1600px,
+  xxxlarge: 1920px,
+);
+@mixin normal-padding {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  @include media(">tablet") {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  @include media(">tablet") {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  @include media(">desktop") {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+@mixin normal-padding-top {
+  padding-top: 30px;
+  padding-bottom: 0;
+  @include media(">tablet") {
+    padding-top: 50px;
+    padding-bottom: 0;
+  }
+  @include media(">tablet") {
+    padding-top: 50px;
+    padding-bottom: 0;
+  }
+  @include media(">desktop") {
+    padding-top: 100px;
+    padding-bottom: 0;
+  }
+}
+
+@mixin normal-padding-bottom {
+  padding-top: 0;
+  padding-bottom: 30px;
+  @include media(">tablet") {
+    padding-top: 0;
+    padding-bottom: 50px;
+  }
+  @include media(">tablet") {
+    padding-top: 0;
+    padding-bottom: 50px;
+  }
+  @include media(">desktop") {
+    padding-top: 0;
+    padding-bottom: 100px;
+  }
+}
+
+@mixin normal-padding-side {
+  padding-left: 10px;
+  padding-right: 10px;
+  @include media(">tablet") {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  @include media(">desktop") {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}

@@ -1,0 +1,54 @@
+.tabs {
+  .tabs__image {
+    border: 3px solid #000;
+    box-shadow: 1px 1px 0px #000, 2px 2px 0px #000, 3px 3px 0px #000,
+      4px 4px 0px #000;
+    margin-left: -4px;
+    img {
+      max-width: 100%;
+      display: block;
+    }
+  }
+  .tabs__link {
+    margin-bottom: 15px;
+  }
+  .tabs__nav {
+    margin-bottom: -10px;
+    @include media(">tablet") {
+      margin-bottom: 0;
+    }
+    list-style: none;
+    margin: 15px 0 0 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .tabs__nav-item {
+    margin-bottom: 10px;
+    @include media(">tablet") {
+      margin-bottom: 0;
+    }
+    margin-right: 15px;
+    background: 0 0;
+    font-size: 16px;
+    cursor: pointer;
+    a {
+      padding: 10px 16px;
+    }
+  }
+  .react-tabs__tab--selected {
+    a {
+      color: $white;
+      background: $black;
+    }
+  }
+  &--work-item {
+    .tabs__nav {
+      flex-wrap: wrap;
+    }
+    .tabs__nav-item {
+      @include media("<tablet") {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

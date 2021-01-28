@@ -1,0 +1,40 @@
+.about {
+  &__info {
+    @include normal-padding-top();
+    background: linear-gradient(45deg, #def0f4 0%, #b0cfd2 100%);
+    padding-bottom: 0;
+    .about__info-text {
+      margin-bottom: 25px;
+    }
+    .about__info-image {
+      img {
+        width: 100%;
+        display: block;
+      }
+    }
+  }
+  &__work {
+    .about__work-container {
+      @include media(">tablet") {
+        display: flex;
+      }
+    }
+    .about__work-left {
+      @include normal-padding();
+      @include normal-padding-side();
+      @include media(">tablet") {
+        width: 50%;
+        display: flex;
+        align-items: center;
+      }
+    }
+    .about__work-right {
+      @include normal-padding();
+      @include normal-padding-side();
+      @include media(">tablet") {
+        border-left: 2px solid $black;
+        width: 50%;
+      }
+    }
+  }
+}

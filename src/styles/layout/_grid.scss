@@ -1,0 +1,43 @@
+.grid {
+  &__12 {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 25px;
+  }
+  &__half {
+    grid-column: 1 / 6;
+  }
+}
+
+@mixin grid-1 {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 30px;
+}
+
+@mixin grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+}
+
+@mixin grid-12 {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+@mixin grid-columns-half {
+  grid-column: 1 / 6;
+}
+
+@mixin grid-columns-half-center {
+  grid-column: 4 / 10;
+}
+
+@mixin grid-columns-3-4 {
+  grid-column: 1 / 9;
+}
+
+@mixin grid-columns-full {
+  grid-column: 1 / 13;
+}

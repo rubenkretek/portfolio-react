@@ -1,0 +1,21 @@
+.l {
+  &-default {
+    max-width: $default-grid-width;
+    width: 100%;
+    margin: 0 auto;
+    padding-left: 25px;
+    padding-right: 25px;
+    @include media(">tablet") {
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+    &--full-height {
+      min-height: calc(100vh - 75px);
+    }
+  }
+  &-700 {
+    max-width: 700px;
+    margin: 0 auto;
+    @include normal-padding-side();
+  }
+}

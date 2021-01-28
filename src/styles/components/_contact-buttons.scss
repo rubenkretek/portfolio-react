@@ -1,0 +1,19 @@
+.contact-buttons {
+  display: flex;
+  justify-content: space-between;
+  max-width: 250px;
+  flex-direction: column;
+  .button {
+    margin-bottom: 10px;
+    @include media(">310px") {
+      margin-bottom: 0;
+    }
+    svg {
+      margin: 0 auto;
+    }
+  }
+
+  @include media(">310px") {
+    flex-direction: row;
+  }
+}

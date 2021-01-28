@@ -1,0 +1,49 @@
+.home {
+  &__banner-content {
+  }
+  &__intro {
+    @include normal-padding();
+    background-size: cover;
+    background-position: center bottom;
+
+    .home__intro-container {
+      @include grid-12();
+    }
+    .home__intro-content {
+      @include grid-columns-full();
+      @include media(">tablet") {
+        @include grid-columns-3-4();
+      }
+      @include media(">large") {
+        @include grid-columns-half();
+      }
+    }
+  }
+  &__work {
+    @include normal-padding();
+    .home__work-container {
+      @include grid-12();
+    }
+    .home__work-content {
+      text-align: center;
+      @include grid-columns-full();
+      @include media(">tablet") {
+        @include grid-columns-half-center();
+      }
+    }
+  }
+  &__divider {
+    background-position: 50% 100%;
+    background-size: cover;
+    height: 265px;
+    @include media(">tablet") {
+      height: 365px;
+    }
+    @include media(">large") {
+      height: 565px;
+    }
+  }
+  &__portfolio {
+    @include normal-padding();
+  }
+}

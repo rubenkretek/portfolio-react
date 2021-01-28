@@ -1,0 +1,49 @@
+.work {
+  .work__card {
+  }
+  .work__title {
+    h3 {
+      margin-top: 15px;
+      font-size: 28px;
+      line-height: 1.2;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0;
+      margin-bottom: 0;
+    }
+  }
+  .work__copy {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    line-height: 1.7;
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+  }
+  .work__image {
+    img {
+      border: 3px solid #000;
+      box-shadow: 1px 1px 0px #000, 2px 2px 0px #000, 3px 3px 0px #000,
+        4px 4px 0px #000;
+      margin-left: -4px;
+      max-width: 100%;
+    }
+  }
+  &--list {
+    .work__grid {
+      @include grid-1();
+
+      @include media(">tablet") {
+        @include grid-3();
+      }
+      list-style: none;
+      margin: 0;
+      padding-top: 0;
+      li {
+      }
+    }
+  }
+}

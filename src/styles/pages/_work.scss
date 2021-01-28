@@ -1,0 +1,100 @@
+.work {
+  &__title {
+    @include media("<tablet") {
+      word-break: break-word;
+    }
+  }
+  &__grid {
+    @include normal-padding-bottom();
+  }
+  &__overview {
+    margin-top: 45px;
+    @include media(">tablet") {
+      display: grid;
+      grid-column-gap: 25px;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+  &__overview-item {
+    max-width: 400px;
+    @include media("<tablet") {
+      margin-top: 30px;
+    }
+  }
+  &__featured {
+    @include normal-padding();
+    @include media(">tablet") {
+      display: flex;
+      align-items: center;
+    }
+    & > div {
+      padding-left: 15px;
+      padding-right: 15px;
+      @include media(">tablet") {
+        width: 50%;
+      }
+      @include media(">desktop") {
+        padding-left: 50px;
+        padding-right: 50px;
+      }
+    }
+    &-right {
+      padding-top: 30px;
+      @include media(">tablet") {
+        padding-top: 0;
+      }
+    }
+    &-content {
+      max-width: 600px;
+    }
+  }
+  &__content {
+    @include normal-padding();
+    &-container {
+      @include normal-padding();
+      @include media(">tablet") {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      p {
+        line-height: 1.6;
+      }
+      ul {
+        line-height: 1.6;
+      }
+    }
+    &-left {
+      @include media(">tablet") {
+        width: 50%;
+      }
+    }
+    &-right {
+      @include media(">tablet") {
+        width: 50%;
+        @include normal-padding-side();
+      }
+    }
+  }
+
+  &__conclusion {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    &-copy {
+      * {
+        font-size: 17px;
+        line-height: 1.4;
+        font-weight: 700;
+        letter-spacing: 0;
+      }
+    }
+    &-container {
+      max-width: 600px;
+    }
+  }
+}
+
+img {
+  max-width: 100%;
+}

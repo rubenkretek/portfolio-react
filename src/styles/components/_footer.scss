@@ -1,0 +1,56 @@
+.footer {
+  &__top {
+    @include normal-padding();
+    text-align: center;
+  }
+  &__image {
+    max-width: 100px;
+    display: block;
+    margin: 0 auto;
+  }
+  &__email {
+    text-decoration: none;
+    transition: all 0.3 ease;
+    font-size: 18px;
+    @include media(">phone") {
+      font-size: 22px;
+    }
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  &__bottom {
+    display: flex;
+  }
+  &__links {
+    list-style: none;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 10px 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    @include media(">tablet") {
+      padding: 10px 25px;
+    }
+    li {
+      border-right: 2px solid rgba(255, 255, 255, 62%);
+      &:last-child {
+        border: none;
+      }
+      a {
+        font-weight: $global-weight-bold;
+        text-decoration: none;
+        transition: all 0.3 ease;
+        display: block;
+        padding-top: 2px;
+        padding-bottom: 2px;
+        &:hover {
+          background: $black-hover;
+        }
+      }
+    }
+  }
+}
