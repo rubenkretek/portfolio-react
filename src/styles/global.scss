@@ -179,4 +179,17 @@ a,
   * {
     color: $white;
   }
+  .button {
+    background-color: $black;
+    border-color: $white;
+    color: $white;
+    box-shadow: 1px 1px 0px $white, 2px 2px 0px $white, 3px 3px 0px $white,
+      4px 4px 0px $white;
+    &:hover {
+      box-shadow: 1px 1px 0px $white, 2px 2px 0px $white, 3px 3px 0px $white,
+        4px 4px 0px $white;
+      background: $white;
+      color: $black;
+    }
+  }
 }

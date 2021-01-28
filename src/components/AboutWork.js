@@ -37,7 +37,7 @@ const AboutWork = () => {
                             </div>
 
 
-                            <Tabs className="tabs">
+                            <Tabs className="tabs tabs--work">
                                 {workItems.map(({ projectName, thumbnail, url }) => (
                                     <TabPanel>
                                         <div className="tabs__title">

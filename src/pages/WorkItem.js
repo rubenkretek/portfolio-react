@@ -3,6 +3,8 @@ import { useHistory } from 'react-router-dom';
 import { workState } from '../workState';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
+import ContactModule from '../components/ContactModule';
+
 
 
 const WorkItem = () => {
@@ -68,7 +70,7 @@ const WorkItem = () => {
                     </section>
                     <section className="work__featured" style={featuredStyles}>
                         <div className="work__featured-left">
-                            <Tabs className="tabs tabs--work-item">
+                            <Tabs className="tabs tabs--work">
                                 {work.carouselImages.map((carouselImages) => (
                                     <TabPanel>
                                         <div className="tabs__image">
@@ -89,44 +91,55 @@ const WorkItem = () => {
                             <div className="work__featured-content">
                                 <h2 className="heading-large">{work.carouselTitle}</h2>
                                 <h3>{work.carouselSubtitle}</h3>
-                                <p>{work.carouselText}</p>
+                                <div className="work__featured-text" dangerouslySetInnerHTML={{ __html: work.carouselText }}>
+                                    { }
+                                </div>
                             </div>
                         </div>
                     </section>
-                    <section class="work__content">
-                        <h2>{work.contentTitle}</h2>
-                        {work.contentModules.map((contentModules) => (
-                            <div className="work__content-container">
-                                <div className="work__content-left">
-                                    <div className="work__content-image">
-                                        <img src={contentModules.contentImg} alt={contentModules.contentImgAltText} />
-                                    </div>
-                                </div>
-                                <div className="work__content-right">
-                                    <div className="work__content-title">
-                                        <h3>{contentModules.contentSubtitle}</h3>
-                                    </div>
-                                    <div className="work__content-copy" dangerouslySetInnerHTML={{ __html: contentModules.contentText }}>
-                                        {/* HTML content gets parsed here */}
-                                    </div>
-                                    {contentModules.link && (
-                                        <div className="work__content-link">
-                                            <a href={contentModules.link}>{contentModules.linkText}</a>
+                    <section className="work__content">
+                        <div className="l-default">
+                            <h2 className="heading-large">{work.contentTitle}</h2>
+                            {work.contentModules.map((contentModules) => (
+                                <div className="work__content-container">
+                                    <div className="work__content-left">
+                                        <div className="work__content-image">
+                                            <img src={contentModules.contentImg} alt={contentModules.contentImgAltText} />
                                         </div>
-                                    )}
+                                    </div>
+                                    <div className="work__content-right">
+                                        <div className="work__content-title">
+                                            <h3>{contentModules.contentSubtitle}</h3>
+                                        </div>
+                                        <div className="work__content-copy" dangerouslySetInnerHTML={{ __html: contentModules.contentText }}>
+                                            {/* HTML content gets parsed here */}
+                                        </div>
+                                        {contentModules.link && (
+                                            <div className="work__content-link">
+                                                <a href={contentModules.link} className="button">{contentModules.linkText}</a>
+                                            </div>
+                                        )}
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </section>
+                    <section className="work__conclusion secondary">
+                        <div className="l-default">
+                            <div className="work__conclusion-container">
+                                <h2 className="heading-large">Finished Product</h2>
+                                <div className="work__conclusion-copy text--lead" dangerouslySetInnerHTML={{ __html: work.conclusionText }}>
+
+                                    {/* HTML content gets parsed here */}
+
+                                </div>
+                                <div className="work__conclusion-link">
+                                    <a href={work.conclusionLink} className="button">{work.conclusionLinkText}</a>
                                 </div>
                             </div>
-                        ))}
-                    </section>
-                    <section class="work__conclusion">
-                        <h2>Finished Product</h2>
-                        <div className="work__conclusion-copy" dangerouslySetInnerHTML={{ __html: work.conclusionText }}>
-                            {/* HTML content gets parsed here */}
-                        </div>
-                        <div className="work__conclusion-link">
-                            <a href={work.conclusionLink}>{work.conclusionLinkText}</a>
                         </div>
                     </section>
+                    <ContactModule />
                 </div>
             )}
         </>
