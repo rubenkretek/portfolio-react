@@ -12,9 +12,13 @@ import dividerBackground from '../img/black-background-mountain.jpg';
 import WorkGrid from '../components/WorkGrid';
 import ContactModule from '../components/ContactModule';
 
+//Animations
+import { motion } from 'framer-motion';
+import { pageAnimation } from '../animation';
+
 const Home = () => {
     return (
-        <div className="home">
+        <motion.div className="home" variants={pageAnimation} initial='hidden' animate='show' exit='exit'>
             <section className="home__banner">
                 <div className="l-default">
                     <div className="banner--full-height">
@@ -86,7 +90,7 @@ const Home = () => {
                 </div>
             </section>
             <ContactModule />
-        </div>
+        </motion.div>
     )
 }
 

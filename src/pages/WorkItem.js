@@ -5,6 +5,9 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import ContactModule from '../components/ContactModule';
 
+//Animations
+import { motion } from 'framer-motion';
+import { pageAnimation } from '../animation';
 
 
 const WorkItem = () => {
@@ -28,7 +31,7 @@ const WorkItem = () => {
 
 
     return (
-        <>
+        <motion.div variants={pageAnimation} initial='hidden' animate='show' exit='exit'>
             {work && (
                 <div>
                     <section className="banner work__banner">
@@ -142,7 +145,7 @@ const WorkItem = () => {
                     <ContactModule />
                 </div>
             )}
-        </>
+        </motion.div>
     )
 };
 
