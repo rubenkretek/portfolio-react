@@ -5,6 +5,10 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 //Icons
 import { FaLongArrowAltRight } from 'react-icons/fa';
 
+//Animations
+import { motion, AnimatePresence } from 'framer-motion';
+import { tabsAnimation } from '../animation';
+
 const AboutWork = () => {
     const [workItems, setWorkItems] = useState(workState);
     return (
@@ -47,16 +51,19 @@ const AboutWork = () => {
                                         <div className="tabs__link">
                                             <a href={url} className="arrow-link">View project <FaLongArrowAltRight /></a>
                                         </div>
-                                        <div className="tabs__image">
-                                            <img src={thumbnail} alt={thumbnail} />
-                                        </div>
+                                        <AnimatePresence exitBeforeEnter>
+                                            <motion.div variants={tabsAnimation} initial='hidden' animate='show'>
+                                                <div className="tabs__image">
+                                                    <img src={thumbnail} alt={thumbnail} />
+                                                </div>
+                                            </motion.div>
+                                        </AnimatePresence>
                                     </TabPanel>
                                 ))}
                                 <TabList className="tabs__nav">
                                     {workItems.map((workItems, i) => (
                                         <Tab className="tabs__nav-item">
                                             <a className="button">{i + 1}</a>
-
                                         </Tab>
                                     ))}
                                 </TabList>
@@ -68,7 +75,7 @@ const AboutWork = () => {
                 </div>
             </section>
 
-        </div>
+        </div >
     )
 }
 

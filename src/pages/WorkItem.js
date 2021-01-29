@@ -7,7 +7,7 @@ import ContactModule from '../components/ContactModule';
 
 //Animations
 import { motion } from 'framer-motion';
-import { pageAnimation } from '../animation';
+import { pageAnimation, revTabsAnimation } from '../animation';
 
 
 const WorkItem = () => {
@@ -76,9 +76,11 @@ const WorkItem = () => {
                             <Tabs className="tabs tabs--work">
                                 {work.carouselImages.map((carouselImages) => (
                                     <TabPanel>
-                                        <div className="tabs__image">
-                                            <img src={carouselImages.carouselImage} alt={carouselImages.carouselAltText} />
-                                        </div>
+                                        <motion.div variants={revTabsAnimation} initial='hidden' animate='show'>
+                                            <div className="tabs__image">
+                                                <img src={carouselImages.carouselImage} alt={carouselImages.carouselAltText} />
+                                            </div>
+                                        </motion.div>
                                     </TabPanel>
                                 ))}
                                 <TabList className="tabs__nav">
