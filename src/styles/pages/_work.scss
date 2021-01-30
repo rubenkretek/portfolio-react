@@ -1,4 +1,7 @@
 .work {
+  &__banner {
+    @include normal-padding();
+  }
   &__title {
     @include media("<tablet") {
       word-break: break-word;

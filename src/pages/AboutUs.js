@@ -3,6 +3,8 @@ import React from 'react';
 import AboutBanner from '../components/AboutBanner';
 import AboutInfo from '../components/AboutInfo';
 import AboutWork from '../components/AboutWork';
+import ScrollTop from '../components/ScrollTop';
+
 //Animations
 import { motion } from 'framer-motion';
 import { pageAnimation } from '../animation';
@@ -13,6 +15,7 @@ const AboutUs = () => {
             <AboutBanner />
             <AboutInfo />
             <AboutWork />
+            <ScrollTop />
         </motion.div>
     )
 }

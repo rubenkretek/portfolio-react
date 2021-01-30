@@ -11,6 +11,7 @@ import dividerBackground from '../img/black-background-mountain.jpg';
 //Components
 import WorkGrid from '../components/WorkGrid';
 import ContactModule from '../components/ContactModule';
+import ScrollTop from '../components/ScrollTop';
 
 //Animations
 import { motion } from 'framer-motion';
@@ -90,6 +91,7 @@ const Home = () => {
                 </div>
             </section>
             <ContactModule />
+            <ScrollTop />
         </motion.div>
     )
 }

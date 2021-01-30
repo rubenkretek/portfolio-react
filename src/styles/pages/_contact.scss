@@ -1,0 +1,13 @@
+.contact {
+  .heading-xlarge {
+    @include media("<=400px") {
+      font-size: 60px;
+    }
+    @include media("<=325px") {
+      font-size: 45px;
+    }
+    @include media("<=260px") {
+      font-size: 30px;
+    }
+  }
+}

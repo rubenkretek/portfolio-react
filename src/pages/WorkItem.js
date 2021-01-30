@@ -4,6 +4,7 @@ import { workState } from '../workState';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import ContactModule from '../components/ContactModule';
+import ScrollTop from '../components/ScrollTop';
 
 //Animations
 import { motion } from 'framer-motion';
@@ -147,6 +148,7 @@ const WorkItem = () => {
                     <ContactModule />
                 </div>
             )}
+            <ScrollTop />
         </motion.div>
     )
 };

@@ -2,6 +2,7 @@ import React from 'react';
 import WorkGrid from '../components/WorkGrid';
 import WorkBanner from '../components/WorkBanner';
 import ContactModule from '../components/ContactModule';
+import ScrollTop from '../components/ScrollTop';
 
 //Animations
 import { motion } from 'framer-motion';
@@ -18,6 +19,7 @@ const Work = () => {
                 </div>
             </section>
             <ContactModule />
+            <ScrollTop />
         </motion.div>
     )
 }
