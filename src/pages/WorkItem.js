@@ -1,6 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
+
+
+
+import axios from 'axios';
 import { workState } from '../workState';
+
+
+
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import ContactModule from '../components/ContactModule';
@@ -28,6 +35,14 @@ const WorkItem = () => {
         setWork(currentWork[0]);
         setBackgroundColor(currentWork[0].carouselBackground);
     }, [workItems, url]);
+
+    useEffect(() => {
+        axios.get('http://localhost:1337/works')
+            .then(data => {
+                console.log(data);
+            })
+            .catch(err => console.log('error'));
+    }, []);
 
 
 
