@@ -1,10 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { workState } from '../workState';
 import { Link } from 'react-router-dom';
-//Page components
+
+// Redux
+import { useDispatch } from "react-redux";
+import { loadWorks } from "../actions/worksAction";
 
 
 const WorkGrid = () => {
+    const dispatch = useDispatch();
+    useEffect(() => {
+        dispatch(loadWorks());
+    });
     const [workItems, setWorkItems] = useState(workState);
     return (
         <div className="work work--list">

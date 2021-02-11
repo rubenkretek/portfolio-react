@@ -36,14 +36,6 @@ const WorkItem = () => {
         setBackgroundColor(currentWork[0].carouselBackground);
     }, [workItems, url]);
 
-    useEffect(() => {
-        axios.get('http://localhost:1337/works')
-            .then(data => {
-                console.log(data);
-            })
-            .catch(err => console.log('error'));
-    }, []);
-
 
 
     return (
