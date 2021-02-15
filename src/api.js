@@ -1,4 +1,5 @@
 // Base URL
-const base_url = 'http://localhost:1337/works/';
+export const base_url = 'http://localhost:1337';
 
-export const allWorksURL = () => `${base_url}`;
+
+export const allWorksURL = () => `${base_url}/works/`;
