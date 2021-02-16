@@ -3,9 +3,9 @@ import { base_url } from '../api';
 import { Link } from 'react-router-dom';
 
 const workGridItem = ({ projectName, thumbnail, url, teaserText }) => {
+
     const imageUrl = base_url + thumbnail.url;
     return (
-
         <li>
             <div className="work__card">
                 <div className="work__image">
@@ -26,8 +26,6 @@ const workGridItem = ({ projectName, thumbnail, url, teaserText }) => {
                 </div>
             </div>
         </li>
-
-
     )
 }
 
