@@ -7,7 +7,7 @@ export const loadDetail = (id) => async (dispatch) => {
         type: "GET_DETAIL",
         payload: {
             workItem: detailData.data,
-        }
+        },
     });
-}
+};
 

@@ -2,9 +2,20 @@ import React from 'react';
 import { base_url } from '../api';
 import { Link } from 'react-router-dom';
 
-const workGridItem = ({ projectName, thumbnail, url, teaserText }) => {
+//Redux
+import { loadDetail } from '../actions/itemAction';
+import { useDispatch } from "react-redux";
+
+const WorkGridItem = ({ projectName, thumbnail, url, teaserText, id }) => {
+
+    //Load Details
+    const dispatch = useDispatch();
+    const loadItemHandler = () => {
+        dispatch(loadDetail(id));
+    }
 
     const imageUrl = base_url + thumbnail.url;
+
     return (
         <li>
             <div className="work__card">
@@ -22,11 +33,11 @@ const workGridItem = ({ projectName, thumbnail, url, teaserText }) => {
                     </ul>
                 </div>
                 <div className="work__link">
-                    <Link to={url} className="button">Read more</Link>
+                    <Link onClick={loadItemHandler} className="button">Read more</Link>
                 </div>
             </div>
         </li>
     )
 }
 
-export default workGridItem;
+export default WorkGridItem;
