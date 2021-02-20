@@ -1,6 +1,12 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { useHistory } from 'react-router-dom';
 
-import { base_url } from '../api';
+
+
+import axios from 'axios';
+import { workState } from '../workState';
+
+
 
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
@@ -11,26 +17,30 @@ import ScrollTop from '../components/ScrollTop';
 import { motion } from 'framer-motion';
 import { pageAnimation, revTabsAnimation } from '../animation';
 
-//Redux
-import { useSelector } from 'react-redux';
-
 
 const WorkItem = () => {
-    //Data
-    const work = useSelector((state) => state.item.workItem);
-
+    const history = useHistory();
+    const url = history.location.pathname;
+    const [workItems, setWorkItems] = useState(workState);
+    const [work, setWork] = useState(null);
+    const [backgroundColor, setBackgroundColor] = useState(null);
     const featuredStyles = {
-        backgroundColor: work.carouselBackground,
+        backgroundColor: backgroundColor,
     };
 
-    const conclusion = work.conclusion;
 
-    console.log(conclusion);
+    //useEffect
+    useEffect(() => {
+        const currentWork = workItems.filter((stateWork) => stateWork.url === url);
+        setWork(currentWork[0]);
+        setBackgroundColor(currentWork[0].carouselBackground);
+    }, [workItems, url]);
+
+
 
     return (
-
         <motion.div variants={pageAnimation} initial='hidden' animate='show' exit='exit'>
-            {!work.IsLoading && (
+            {work && (
                 <div>
                     <section className="banner work__banner">
                         <div className="l-default">
@@ -47,10 +57,10 @@ const WorkItem = () => {
                                 <div className="work__overview-item">
                                     <h2 className="heading-h3 text--red">The brief</h2>
                                     <ul className="text--meta">
-                                        {work.brief.map((briefItem) => (
+                                        {work.brief.map((brief) => (
                                             <BriefListItem
-                                                key={briefItem.id}
-                                                briefPoint={briefItem.briefPoint}
+                                                briefPoint={brief.briefPoint}
+                                                key={brief.briefPoint}
                                             />
                                         ))}
                                     </ul>
@@ -58,10 +68,10 @@ const WorkItem = () => {
                                 <div className="work__overview-item">
                                     <h2 className="heading-h3 text--red">Delivarables</h2>
                                     <ul className="text--meta">
-                                        {work.deliverables.map((deliverable) => (
+                                        {work.deliverables.map((deliverables) => (
                                             <DeliverablesListItem
-                                                key={deliverable.id}
-                                                deliverablesPoint={deliverable.deliverablesPoint}
+                                                deliverablesPoint={deliverables.deliverablesPoint}
+                                                key={deliverables.deliverablesPoint}
                                             />
                                         ))}
                                     </ul>
@@ -76,7 +86,7 @@ const WorkItem = () => {
                                     <TabPanel>
                                         <motion.div variants={revTabsAnimation} initial='hidden' animate='show'>
                                             <div className="tabs__image">
-                                                <img src={base_url + carouselImages.url} alt={carouselImages.alternativeText} />
+                                                <img src={carouselImages.carouselImage} alt={carouselImages.carouselAltText} />
                                             </div>
                                         </motion.div>
                                     </TabPanel>
@@ -107,17 +117,15 @@ const WorkItem = () => {
                                 <div className="work__content-container">
                                     <div className="work__content-left">
                                         <div className="work__content-image">
-                                            <img src={base_url + contentModules.image.url} alt={contentModules.image.alternativeText} />
+                                            <img src={contentModules.contentImg} alt={contentModules.contentImgAltText} />
                                         </div>
                                     </div>
                                     <div className="work__content-right">
                                         <div className="work__content-title">
-                                            <h3>{contentModules.subtitle}</h3>
+                                            <h3>{contentModules.contentSubtitle}</h3>
                                         </div>
-                                        <div className="work__content-copy">
-                                            <p dangerouslySetInnerHTML={{ __html: contentModules.text }}>
-                                                { }
-                                            </p>
+                                        <div className="work__content-copy" dangerouslySetInnerHTML={{ __html: contentModules.contentText }}>
+                                            {/* HTML content gets parsed here */}
                                         </div>
                                         {contentModules.link && (
                                             <div className="work__content-link">
@@ -133,13 +141,13 @@ const WorkItem = () => {
                         <div className="l-default">
                             <div className="work__conclusion-container">
                                 <h2 className="heading-large">Finished Product</h2>
-                                <div className="work__conclusion-copy text--lead">
-                                    <p dangerouslySetInnerHTML={{ __html: conclusion.text }}>
-                                        {/* HTML content gets parsed here */}
-                                    </p>
+                                <div className="work__conclusion-copy text--lead" dangerouslySetInnerHTML={{ __html: work.conclusionText }}>
+
+                                    {/* HTML content gets parsed here */}
+
                                 </div>
                                 <div className="work__conclusion-link">
-                                    <a href={conclusion.link} className="button" target="_blank" rel="noreferrer">{conclusion.linkText}</a>
+                                    <a href={work.conclusionLink} className="button" target="_blank" rel="noreferrer">{work.conclusionLinkText}</a>
                                 </div>
                             </div>
                         </div>

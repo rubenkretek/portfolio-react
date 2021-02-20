@@ -28,12 +28,12 @@ const WorkGridItem = ({ projectName, thumbnail, url, teaserText, id }) => {
                 <div className="work__copy">
                     <ul>
                         {teaserText.map((teaserText) => (
-                            <li>{teaserText.teaserPoint}</li>
+                            <li key={teaserText.id}>{teaserText.teaserPoint}</li>
                         ))}
                     </ul>
                 </div>
                 <div className="work__link">
-                    <Link onClick={loadItemHandler} className="button">Read more</Link>
+                    <Link onClick={loadItemHandler} to={`/work/${id}`} className="button">Read more</Link>
                 </div>
             </div>
         </li>
