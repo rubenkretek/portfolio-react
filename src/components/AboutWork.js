@@ -14,7 +14,7 @@ const AboutWork = () => {
     return (
         <div>
             <section id="about__section-3" className="about__work">
-                <div class="l-default">
+                <div className="l-default">
                     <div className="about__work-container">
                         <div className="about__work-left">
                             <div>
@@ -37,7 +37,7 @@ const AboutWork = () => {
                         <div className="about__work-right">
 
                             <div className="about__work-subtitle">
-                                <h2 class="heading-h4 text--red">Examples of work</h2>
+                                <h2 className="heading-h4 text--red">Examples of work</h2>
                             </div>
 
 
@@ -45,7 +45,7 @@ const AboutWork = () => {
                                 {workItems.map(({ projectName, thumbnail, url }) => (
                                     <TabPanel>
                                         <div className="tabs__title">
-                                            <h3 class="heading-medium">{projectName}</h3>
+                                            <h3 className="heading-medium">{projectName}</h3>
 
                                         </div>
                                         <div className="tabs__link">

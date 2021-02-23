@@ -28,14 +28,13 @@ const WorkItem = () => {
     console.log(conclusion);
 
     return (
-
         <motion.div variants={pageAnimation} initial='hidden' animate='show' exit='exit'>
             {!work.IsLoading && (
                 <div>
                     <section className="banner work__banner">
                         <div className="l-default">
                             <div className="work__title">
-                                <h1 class="heading-xlarge">{work.companyName}</h1>
+                                <h1 className="heading-xlarge">{work.companyName}</h1>
                             </div>
                             <div className="work__overview">
                                 <div className="work__overview-item">

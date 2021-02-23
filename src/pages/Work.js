@@ -15,7 +15,7 @@ const Work = () => {
         <motion.div variants={pageAnimation} initial='hidden' animate='show' exit='exit'>
             {/* <WorkItem /> */}
             <WorkBanner />
-            <section class="work__grid" id="work__section-2">
+            <section className="work__grid" id="work__section-2">
                 <div className="l-default">
                     <WorkGrid />
                 </div>

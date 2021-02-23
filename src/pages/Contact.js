@@ -11,14 +11,14 @@ import { pageAnimation } from '../animation';
 const Contact = () => {
     return (
         <motion.div variants={pageAnimation} initial='hidden' animate='show' exit='exit'>
-            <section id="contact__section-1" class="contact">
+            <section id="contact__section-1" className="contact">
                 <div className="l-default">
-                    <div class="banner banner--work">
-                        <div class="banner__container">
+                    <div className="banner banner--work">
+                        <div className="banner__container">
                             <div>
-                                <h1 class="heading-xlarge">Contact</h1>
-                                <p class="text--banner">
-                                    Get in touch, whether you want to <span class="text--red">work together</span> or just talk about design.
+                                <h1 className="heading-xlarge">Contact</h1>
+                                <p className="text--banner">
+                                    Get in touch, whether you want to <span className="text--red">work together</span> or just talk about design.
                             </p>
                                 <ContactButtons />
                             </div>
