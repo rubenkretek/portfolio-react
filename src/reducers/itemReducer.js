@@ -4,6 +4,7 @@ const initialState = {
         deliverables: [],
         carouselImages: [],
         contentModules: [],
+        conclusion: [],
         isLoading: true
     }
 };

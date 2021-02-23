@@ -134,12 +134,12 @@ const WorkItem = () => {
                             <div className="work__conclusion-container">
                                 <h2 className="heading-large">Finished Product</h2>
                                 <div className="work__conclusion-copy text--lead">
-                                    <p dangerouslySetInnerHTML={{ __html: conclusion.text }}>
-                                        {/* HTML content gets parsed here */}
+                                    <p dangerouslySetInnerHTML={{ __html: work.conclusion.text }}>
+                                        { }
                                     </p>
                                 </div>
                                 <div className="work__conclusion-link">
-                                    <a href={conclusion.link} className="button" target="_blank" rel="noreferrer">{conclusion.linkText}</a>
+                                    <a href={work.conclusion.link} className="button" target="_blank" rel="noreferrer">{work.conclusion.linkText}</a>
                                 </div>
                             </div>
                         </div>
