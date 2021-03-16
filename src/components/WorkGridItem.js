@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import { loadDetail } from '../actions/itemAction';
 import { useDispatch } from "react-redux";
 
-const WorkGridItem = ({ projectName, thumbnail, url, teaserText, id }) => {
+const WorkGridItem = ({ projectName, thumbnail, teaserText, id }) => {
 
     //Load Details
     const dispatch = useDispatch();

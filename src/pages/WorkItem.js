@@ -70,7 +70,7 @@ const WorkItem = () => {
                     </section>
                     <section className="work__featured" style={featuredStyles}>
                         <div className="work__featured-left">
-                            <Tabs className="tabs tabs--work">
+                            <Tabs className="tabs tabs--work" defaultIndex={0}>
                                 {work.carouselImages.map((carouselImages) => (
                                     <TabPanel>
                                         <motion.div variants={revTabsAnimation} initial='hidden' animate='show'>
